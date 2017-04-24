@@ -1,0 +1,5 @@
+Django==1.11
+Pillow==4.1.0
+django-sitetree==1.8.0
+olefile==0.44
+pytz==2017.2
