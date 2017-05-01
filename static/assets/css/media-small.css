@@ -1,0 +1,92 @@
+@media only screen and (max-width: 768px) {
+  .navbar-top {
+    padding: 0; }
+    .navbar-top .navbar-nav {
+      margin: 0; }
+      .navbar-top .navbar-nav li a {
+        text-align: right; }
+    .navbar-top .logo img {
+      width: 80px;
+      height: 80px;
+      left: 15px; }
+    .navbar-top .logo span {
+      margin-left: 110px;
+      font-size: 20px; }
+
+  .advert-col {
+    padding: 0;
+    margin-bottom: 30px; }
+    .advert-col:last-child {
+      margin-bottom: 0; }
+
+  .slick-prev, .slick-next {
+    opacity: 0.3 !important; }
+
+  .desc {
+    position: relative !important;
+    padding: 15px !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: #dc143c !important; }
+    .desc .desc-title {
+      font-size: 14px !important; }
+    .desc .desc-content {
+      font-size: 12px !important; }
+
+  .winners .tab-content {
+    margin-top: 15px; }
+  .winners .tabs-left .nav-tabs li {
+    float: inherit;
+    width: 100%; }
+
+  .small-btn {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+    .small-btn .btn,
+    .small-btn .btn:hover,
+    .small-btn .btn:active,
+    .small-btn .btn.active {
+      box-shadow: none;
+      border-radius: 0; }
+    .small-btn .btn-theme,
+    .small-btn .btn-theme:hover,
+    .small-btn .btn-theme:active,
+    .small-btn .btn-theme.active {
+      border-radius: 3px; }
+    .small-btn .btn-theme {
+      position: relative;
+      display: block;
+      color: #5366ce;
+      border-color: #5366ce;
+      text-transform: uppercase;
+      font-size: 14px;
+      padding: 5px 10px;
+      width: 120px;
+      margin: 0 auto; }
+      .small-btn .btn-theme .fa {
+        padding-right: 10px; }
+    .small-btn .btn-theme:hover {
+      background-color: #435469;
+      border-color: #435469;
+      color: #ffffff; }
+
+  .navbar-nav > li > a {
+    padding-top: 20px;
+    padding-bottom: 20px; } }
+@media only screen and (max-width: 970px) {
+  .advert-thumb {
+    display: block;
+    padding: 0 15px 15px; }
+    .advert-thumb img {
+      width: 100%;
+      height: auto; }
+  .advert-info .title {
+    font-size: 14px; }
+
+  .two-title .btn-theme {
+    display: none; } }
+
+/*# sourceMappingURL=media-small.css.map */

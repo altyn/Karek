@@ -1,10 +1,816 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+	<meta charset="UTF-8">
+	<title>Эл аралык Карек фестивалы</title>
+    {% load staticfiles %}
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{% static 'assets/css/_bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/font-awesome.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/slick-theme.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/scrolling-nav.css' %}">
 </head>
-<body>
+<body id="page-top" data-spy="scroll">
+	<header>
+		<nav class="navbar navbar-top navbar-fixed-top">
+		  <div class="container">
+		    <div class="navbar-header">
+				<div class="logo">
+					<a class="page-scroll" href="#page-top">
+						<img src="http://www.impacthub.net/hubfs/Impact_Hub_Sept2016_Theme/Image/impact-hub-logo.png?t=1493125495164" alt="">
+						<span>Карек фестивалы</span>
+					</a>
+				</div>
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-top" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+				</button>
+		    </div>
+		    <div class="collapse navbar-collapse" id="navbar-top">
+		      <ul class="nav navbar-nav navbar-right navbar-menu">
+		        <li><a class="page-scroll" href="#advert">Пресс релиздер</a></li>
+		        <li><a class="page-scroll" href="#news">Жарыялар</a></li>
+		        <li><a class="page-scroll" href="#nominant">Номинациялар</a></li>
+		        <li><a class="page-scroll" href="#gallery">Галерея</a></li>
+		        <li><a class="page-scroll" href="#founders">Негиздөөчүлөр</a></li>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+	</header>
+	<div class="slick-slider">
+		<div>
+			<img class="img-responsive" src="assets/images/slider/1.jpg" alt="">
+			<div class="desc container">
+				<div class="desc-title">
+					Объявляется прием фильмов на второй республиканский детско-юношеский кинофестиваль «Карек»
+				</div>
+				<div class="desc-content">
+					В кинофестивале смогут принять участие абсолютно все ученики школ и колледжей страныот 7 до 17 лет, интересующиеся кинематографией. Для этого необходимо снять короткометражный фильм до 10 минут в формате mov, mp4, m4v, mpeg;на любую камеру, планшет или телефон. Фильм может быть снят в любом жанре: комедия, мелодрама, драма, триллер, боевик, фантастика, анимация, документальный.
+				</div>
+			</div>
+		</div>
+		<div>
+			<img class="img-responsive" src="assets/images/slider/2.jpg" alt="">
+			<div class="desc container">
+				<div class="desc-title">
+					Цель фестиваля, уже сейчас, выявить и начать воспитывать будущих профессионалов и специалистов в этой сфере.
+				</div>
+				<div class="desc-content">
+					Второй республиканский детско-юношеский кинофестиваль«Карек» пройдет при поддержке Министерства культуры, информации и туризма КР, Министерства образования и науки КР, Департамента кинематографистии КР, Союза кинематографистов, Академии «Ак Илбирс»и частных киностудий.
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="advert section" id="advert">
+		<div class="container">
+			<div class="two-title">
+				<h3 class="header-title">
+					<span class="icons">
+						<span class="fa-stack">
+							<i class="fa rhex fa-stack-2x"></i>
+							<i class="fa fa-bell fa-stack-1x" aria-hidden="true"></i>
+						</span>
+					</span>
+					<span class="title-text">Пресс релиздер</span>
+				</h3>
+				<a href="#" class="btn btn-theme"><i class="fa fa-rss"></i> Баардыгы</a>
+			</div>
+			<div class="row">
+				<div class="col-sm-6 col-xs-12 advert-col">
+					<div class="advert-thumb">
+						<img src="{% static 'assets/images/advert/1.jpg' %}" alt="">
+					</div>
+					<div class="advert-info">
+						<h4 class="title"><a href="#">Первый республиканский детско-юношеский кинофестиваль «Карек»</a></h4>
+						<div class="content">
+							Посвящается к «Году истории и культуры» и к 75-летию Кыргызского кино. Пройдет 15 ноября 2016 года в кинотеатре "Манас". Организаторы - Министерство культуры КР, Союз кинематографистов КР, кинотеатр "Кыргыз киносу" и частные киностудии.
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-xs-12 advert-col">
+					<div class="advert-thumb">
+						<img src="{% static 'assets/images/advert/2.jpg' %}" alt="">
+					</div>
+					<div class="advert-info">
+						<h4 class="title"><a href="#">Тема: первого кинофестиваля «Это мой мир» / «Бул менин дуйном!»</a></h4>
+						<div class="content">
+							Дети не только объект для воспитания. Дети могут быть и субъектом мировоззрения, взгляда на современность, автором произведения. Каждый ребенок – большой талант, которому есть что сказать миру, посредством кинематографа. Мы хотим открыть эти таланты.
+						</div>
+					</div>
+				</div>
+				<div class="small-btn">
+					<a href="#" class="btn btn-theme small-btn"><i class="fa fa-rss"></i> Баардыгы</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section news" id="news">
+		<div class="container">
+			<h3 class="header-title">
+				<span class="icons">
+					<span class="fa-stack">
+						<i class="fa rhex fa-stack-2x"></i>
+						<i class="fa fa-newspaper-o fa-stack-1x" aria-hidden="true"></i>
+					</span>
+				</span>
+				<span class="title-text">Объявление / Жарыя / Новости</span>
+			</h3>
+			<div class="row">
+				<div class="col-sm-4 col-xs-12">
+					<article class="media">
+						<div class="post-media">
+						    <img src="{% static 'assets/images/post/1.jpg' %}" alt="">
+						</div>
+						<div class="post-header">
+						    <h2 class="post-title"><a href="#">Департамент кинематографии объявляет конкурс на должность режиссера-постановщика художественного фильма “Тайлак Баатыр”</a></h2>
+						</div>
+					</article>
+				</div>
+				<div class="col-sm-4 col-xs-12">
+					<article class="media">
+	                    <div class="post-media">
+	                        <img src="{% static 'assets/images/post/2.jpg' %}" alt="">
+	                    </div>
+	                    <div class="post-header">
+	                        <h2 class="post-title"><a href="#">Кыргызская Высшая Школа Киноискусства и Телевидения объявляет набор на курсы по специальности "Кинопродюсер" КИНОПРОДЮСЕР</a></h2>
+	                    </div>
+	                </article>
+				</div>
+				<div class="col-sm-4 col-xs-12">
+					<article class="media">
+	                    <div class="post-media">
+	                        <img src="{% static 'assets/images/post/3.jpg' %}" alt="">
+	                    </div>
+	                    <div class="post-header">
+	                        <h2 class="post-title"><a href="#">Кыргызская Высшая Школа Киноискусства и Телевидения объявляет набор на курсы по специальности «КИНОДРАМАТУРГ ИГРОВОГО КИНО»</a></h2>
+	                    </div>
+	                </article>
+				</div>
+			</div>
+			<div class="text-center margin-top">
+                <a href="#" class="btn btn-theme">Баардыгын көрүү</a>
+            </div>
+		</div>
+	</section>
+	<section class="fest section color" id="fest">
+		<div class="container">
+			<h3 class="header-title">
+				<span class="icons">
+					<span class="fa-stack">
+						<i class="fa rhex fa-stack-2x"></i>
+						<i class="fa fa-star fa-stack-1x" aria-hidden="true"></i>
+					</span>
+				</span>
+				<span class="title-text">Эл аралык Карек фестивалы</span>
+			</h3>
+			<div class="fest-info">
+				<p>
+					“Иш чаранын максаты балдардын бош убактарында интернеттен туура эмес маалыматтарды алгандын ордуна, жакшы жакка умтулуп, келечекте жакшы чыгармачыл инсандарды пайда кылуу”, — деди Маданият, маалымат жана туризм министри Алтынбек Максүтов.
+				</p>
+				<p>
+					“Карек” кино фестивалынын жетекчиси Толкун Дайырбекованын айтымында, иш-чара жыл сайын өткөрүлүп турмакчы.</p>
+				<p>
+					“Тасманы 10 мүнөттүн тегерегинде кыска метраждуу кылып жана каалаган камерада, телефондо, планшетте тартса болот. Уюштуруу идеясы Кыргыз киносунун ээлери, ошондой эле Алтынбек Максүтовго таандык”, - деп айтты Дайырбекова Kloop.kgге курган маегинде.
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="section nominant" id="nominant">
+		<div class="container">
+			<h3 class="header-title">
+				<span class="icons">
+					<span class="fa-stack">
+						<i class="fa rhex fa-stack-2x"></i>
+						<i class="fa fa-thumbs-up fa-stack-1x"></i>
+					</span>
+				</span>
+				<span class="title-text">Номинациялар</span>
+			</h3>
+			<div class="row">
+				<div class="col-sm-12 col-xs-12">
+				<div class="schedule-wrapper">
+				   <div class="tab-content">
+				      <div id="tab-first" class="tab-pane fade in active">
+				         <div class="schedule-tabs lv2">
+				            <ul id="tabs-lv21" class="nav nav-justified">
+				               <li class=""><a href="#tab-lv21-first" data-toggle="tab" aria-expanded="false">HAll A</a></li>
+				               <li class=""><a href="#tab-lv21-second" data-toggle="tab" aria-expanded="false">HAll B</a></li>
+				               <li class="active"><a href="#tab-lv21-third" data-toggle="tab" aria-expanded="true">HAll C</a></li>
+				               <li class=""><a href="#tab-lv21-last" data-toggle="tab" aria-expanded="false">HAll D</a></li>
+				            </ul>
+				         </div>
+				         <div class="tab-content lv2">
+				            <div id="tab-lv21-first" class="tab-pane fade">
+				               <div class="timeline">
+				                  <article class="post-wrap animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="300">
+				                     <div class="media">
+				                        <!-- -->
+				                        <div class="post-media pull-left">
+				                           <img src="assets/img/preview/avatar-v2-1.jpg" alt="" class="media-object">
+				                        </div>
+				                        <!-- -->
+				                        <div class="media-body">
+				                           <div class="post-header">
+				                              <div class="post-meta">
+				                                 <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+				                                 <a href="#" class="pull-right">
+				                                 <span class="fa-stack fa-lg">
+				                                 <i class="fa fa-stack-2x fa-circle-thin"></i>
+				                                 <i class="fa fa-stack-1x fa-share-alt"></i>
+				                                 </span>
+				                                 </a>
+				                              </div>
+				                              <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+				                           </div>
+				                           <div class="post-body">
+				                              <div class="post-excerpt">
+				                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+				                              </div>
+				                           </div>
+				                           <div class="post-footer">
+				                              <span class="post-readmore">
+				                              <i class="fa fa-microphone"></i> <strong>John Doe</strong> / CEO at Crown.io
+				                              <a href="#"><i class="fa fa-facebook"></i></a>
+				                              <a href="#"><i class="fa fa-twitter"></i></a>
+				                              <a href="#"><i class="fa fa-linkedin"></i></a>
+				                              <a href="#"><i class="fa fa-instagram"></i></a>
+				                              </span>
+				                           </div>
+				                        </div>
+				                        <!-- -->
+				                     </div>
+				                  </article>
+				                  <article class="post-wrap animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="200">
+				                     <div class="media">
+				                        <!-- -->
+				                        <div class="post-media pull-left">
+				                           <img src="assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object">
+				                        </div>
+				                        <!-- -->
+				                        <div class="media-body">
+				                           <div class="post-header">
+				                              <div class="post-meta">
+				                                 <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+				                                 <a href="#" class="pull-right">
+				                                 <span class="fa-stack fa-lg">
+				                                 <i class="fa fa-stack-2x fa-circle-thin"></i>
+				                                 <i class="fa fa-stack-1x fa-share-alt"></i>
+				                                 </span>
+				                                 </a>
+				                              </div>
+				                              <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+				                           </div>
+				                           <div class="post-body">
+				                              <div class="post-excerpt">
+				                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+				                              </div>
+				                           </div>
+				                           <div class="post-footer">
+				                              <span class="post-readmore">
+				                              <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+				                              <a href="#"><i class="fa fa-facebook"></i></a>
+				                              <a href="#"><i class="fa fa-twitter"></i></a>
+				                              <a href="#"><i class="fa fa-linkedin"></i></a>
+				                              <a href="#"><i class="fa fa-instagram"></i></a>
+				                              </span>
+				                           </div>
+				                        </div>
+				                        <!-- -->
+				                     </div>
+				                  </article>
+				                  <article class="post-wrap animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="300">
+				                     <div class="media">
+				                        <!-- -->
+				                        <div class="post-media pull-left">
+				                           <img src="assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object">
+				                        </div>
+				                        <!-- -->
+				                        <div class="media-body">
+				                           <div class="post-header">
+				                              <div class="post-meta">
+				                                 <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+				                                 <a href="#" class="pull-right">
+				                                 <span class="fa-stack fa-lg">
+				                                 <i class="fa fa-stack-2x fa-circle-thin"></i>
+				                                 <i class="fa fa-stack-1x fa-share-alt"></i>
+				                                 </span>
+				                                 </a>
+				                              </div>
+				                              <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+				                           </div>
+				                           <div class="post-body">
+				                              <div class="post-excerpt">
+				                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+				                              </div>
+				                           </div>
+				                           <div class="post-footer">
+				                              <span class="post-readmore">
+				                              <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+				                              <a href="#"><i class="fa fa-facebook"></i></a>
+				                              <a href="#"><i class="fa fa-twitter"></i></a>
+				                              <a href="#"><i class="fa fa-linkedin"></i></a>
+				                              <a href="#"><i class="fa fa-instagram"></i></a>
+				                              </span>
+				                           </div>
+				                        </div>
+				                        <!-- -->
+				                     </div>
+				                  </article>
+				                  <article class="post-wrap animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="200">
+				                     <div class="media">
+				                        <!-- -->
+				                        <div class="post-media pull-left">
+				                           <img src="assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object">
+				                        </div>
+				                        <!-- -->
+				                        <div class="media-body">
+				                           <div class="post-header">
+				                              <div class="post-meta">
+				                                 <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+				                                 <a href="#" class="pull-right">
+				                                 <span class="fa-stack fa-lg">
+				                                 <i class="fa fa-stack-2x fa-circle-thin"></i>
+				                                 <i class="fa fa-stack-1x fa-share-alt"></i>
+				                                 </span>
+				                                 </a>
+				                              </div>
+				                              <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+				                           </div>
+				                           <div class="post-body">
+				                              <div class="post-excerpt">
+				                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+				                              </div>
+				                           </div>
+				                           <div class="post-footer">
+				                              <span class="post-readmore">
+				                              <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+				                              <a href="#"><i class="fa fa-facebook"></i></a>
+				                              <a href="#"><i class="fa fa-twitter"></i></a>
+				                              <a href="#"><i class="fa fa-linkedin"></i></a>
+				                              <a href="#"><i class="fa fa-instagram"></i></a>
+				                              </span>
+				                           </div>
+				                        </div>
+				                        <!-- -->
+				                     </div>
+				                  </article>
+				               </div>
+				            </div>
+				            <div id="tab-lv21-second" class="tab-pane fade">
+				               <div class="timeline">
+				                  <article class="post-wrap">
+				                     <div class="media">
+				                        <!-- -->
+				                        <div class="post-media pull-left">
+				                           <img src="assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object">
+				                        </div>
+				                        <!-- -->
+				                        <div class="media-body">
+				                           <div class="post-header">
+				                              <div class="post-meta">
+				                                 <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+				                                 <a href="#" class="pull-right">
+				                                 <span class="fa-stack fa-lg">
+				                                 <i class="fa fa-stack-2x fa-circle-thin"></i>
+				                                 <i class="fa fa-stack-1x fa-share-alt"></i>
+				                                 </span>
+				                                 </a>
+				                              </div>
+				                              <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+				                           </div>
+				                           <div class="post-body">
+				                              <div class="post-excerpt">
+				                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+				                              </div>
+				                           </div>
+				                           <div class="post-footer">
+				                              <span class="post-readmore">
+				                              <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+				                              <a href="#"><i class="fa fa-facebook"></i></a>
+				                              <a href="#"><i class="fa fa-twitter"></i></a>
+				                              <a href="#"><i class="fa fa-linkedin"></i></a>
+				                              <a href="#"><i class="fa fa-instagram"></i></a>
+				                              </span>
+				                           </div>
+				                        </div>
+				                        <!-- -->
+				                     </div>
+				                  </article>
+				                  <article class="post-wrap">
+				                     <div class="media">
+				                        <!-- -->
+				                        <div class="post-media pull-left">
+				                           <img src="assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object">
+				                        </div>
+				                        <!-- -->
+				                        <div class="media-body">
+				                           <div class="post-header">
+				                              <div class="post-meta">
+				                                 <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+				                                 <a href="#" class="pull-right">
+				                                 <span class="fa-stack fa-lg">
+				                                 <i class="fa fa-stack-2x fa-circle-thin"></i>
+				                                 <i class="fa fa-stack-1x fa-share-alt"></i>
+				                                 </span>
+				                                 </a>
+				                              </div>
+				                              <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+				                           </div>
+				                           <div class="post-body">
+				                              <div class="post-excerpt">
+				                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+				                              </div>
+				                           </div>
+				                           <div class="post-footer">
+				                              <span class="post-readmore">
+				                              <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+				                              <a href="#"><i class="fa fa-facebook"></i></a>
+				                              <a href="#"><i class="fa fa-twitter"></i></a>
+				                              <a href="#"><i class="fa fa-linkedin"></i></a>
+				                              <a href="#"><i class="fa fa-instagram"></i></a>
+				                              </span>
+				                           </div>
+				                        </div>
+				                        <!-- -->
+				                     </div>
+				                  </article>
+				                  <article class="post-wrap">
+				                     <div class="media">
+				                        <!-- -->
+				                        <div class="post-media pull-left">
+				                           <img src="assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object">
+				                        </div>
+				                        <!-- -->
+				                        <div class="media-body">
+				                           <div class="post-header">
+				                              <div class="post-meta">
+				                                 <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+				                                 <a href="#" class="pull-right">
+				                                 <span class="fa-stack fa-lg">
+				                                 <i class="fa fa-stack-2x fa-circle-thin"></i>
+				                                 <i class="fa fa-stack-1x fa-share-alt"></i>
+				                                 </span>
+				                                 </a>
+				                              </div>
+				                              <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+				                           </div>
+				                           <div class="post-body">
+				                              <div class="post-excerpt">
+				                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+				                              </div>
+				                           </div>
+				                           <div class="post-footer">
+				                              <span class="post-readmore">
+				                              <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+				                              <a href="#"><i class="fa fa-facebook"></i></a>
+				                              <a href="#"><i class="fa fa-twitter"></i></a>
+				                              <a href="#"><i class="fa fa-linkedin"></i></a>
+				                              <a href="#"><i class="fa fa-instagram"></i></a>
+				                              </span>
+				                           </div>
+				                        </div>
+				                        <!-- -->
+				                     </div>
+				                  </article>
+				               </div>
+				            </div>
+				            <div id="tab-lv21-third" class="tab-pane fade active in">
+				               <div class="timeline">
+				                  <article class="post-wrap">
+				                     <div class="media">
+				                        <!-- -->
+				                        <div class="post-media pull-left">
+				                           <img src="assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object">
+				                        </div>
+				                        <!-- -->
+				                        <div class="media-body">
+				                           <div class="post-header">
+				                              <div class="post-meta">
+				                                 <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+				                                 <a href="#" class="pull-right">
+				                                 <span class="fa-stack fa-lg">
+				                                 <i class="fa fa-stack-2x fa-circle-thin"></i>
+				                                 <i class="fa fa-stack-1x fa-share-alt"></i>
+				                                 </span>
+				                                 </a>
+				                              </div>
+				                              <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+				                           </div>
+				                           <div class="post-body">
+				                              <div class="post-excerpt">
+				                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+				                              </div>
+				                           </div>
+				                           <div class="post-footer">
+				                              <span class="post-readmore">
+				                              <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+				                              <a href="#"><i class="fa fa-facebook"></i></a>
+				                              <a href="#"><i class="fa fa-twitter"></i></a>
+				                              <a href="#"><i class="fa fa-linkedin"></i></a>
+				                              <a href="#"><i class="fa fa-instagram"></i></a>
+				                              </span>
+				                           </div>
+				                        </div>
+				                        <!-- -->
+				                     </div>
+				                  </article>
+				                  <article class="post-wrap">
+				                     <div class="media">
+				                        <!-- -->
+				                        <div class="post-media pull-left">
+				                           <img src="assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object">
+				                        </div>
+				                        <!-- -->
+				                        <div class="media-body">
+				                           <div class="post-header">
+				                              <div class="post-meta">
+				                                 <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+				                                 <a href="#" class="pull-right">
+				                                 <span class="fa-stack fa-lg">
+				                                 <i class="fa fa-stack-2x fa-circle-thin"></i>
+				                                 <i class="fa fa-stack-1x fa-share-alt"></i>
+				                                 </span>
+				                                 </a>
+				                              </div>
+				                              <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+				                           </div>
+				                           <div class="post-body">
+				                              <div class="post-excerpt">
+				                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+				                              </div>
+				                           </div>
+				                           <div class="post-footer">
+				                              <span class="post-readmore">
+				                              <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+				                              <a href="#"><i class="fa fa-facebook"></i></a>
+				                              <a href="#"><i class="fa fa-twitter"></i></a>
+				                              <a href="#"><i class="fa fa-linkedin"></i></a>
+				                              <a href="#"><i class="fa fa-instagram"></i></a>
+				                              </span>
+				                           </div>
+				                        </div>
+				                        <!-- -->
+				                     </div>
+				                  </article>
+				               </div>
+				            </div>
+				            <div id="tab-lv21-last" class="tab-pane fade">
+				               <div class="timeline">
+				                  <article class="post-wrap">
+				                     <div class="media">
+				                        <!-- -->
+				                        <div class="post-media pull-left">
+				                           <img src="assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object">
+				                        </div>
+				                        <!-- -->
+				                        <div class="media-body">
+				                           <div class="post-header">
+				                              <div class="post-meta">
+				                                 <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+				                                 <a href="#" class="pull-right">
+				                                 <span class="fa-stack fa-lg">
+				                                 <i class="fa fa-stack-2x fa-circle-thin"></i>
+				                                 <i class="fa fa-stack-1x fa-share-alt"></i>
+				                                 </span>
+				                                 </a>
+				                              </div>
+				                              <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+				                           </div>
+				                           <div class="post-body">
+				                              <div class="post-excerpt">
+				                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+				                              </div>
+				                           </div>
+				                           <div class="post-footer">
+				                              <span class="post-readmore">
+				                              <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+				                              <a href="#"><i class="fa fa-facebook"></i></a>
+				                              <a href="#"><i class="fa fa-twitter"></i></a>
+				                              <a href="#"><i class="fa fa-linkedin"></i></a>
+				                              <a href="#"><i class="fa fa-instagram"></i></a>
+				                              </span>
+				                           </div>
+				                        </div>
+				                        <!-- -->
+				                     </div>
+				                  </article>
+				                  <article class="post-wrap">
+				                     <div class="media">
+				                        <!-- -->
+				                        <div class="post-media pull-left">
+				                           <img src="assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object">
+				                        </div>
+				                        <!-- -->
+				                        <div class="media-body">
+				                           <div class="post-header">
+				                              <div class="post-meta">
+				                                 <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+				                                 <a href="#" class="pull-right">
+				                                 <span class="fa-stack fa-lg">
+				                                 <i class="fa fa-stack-2x fa-circle-thin"></i>
+				                                 <i class="fa fa-stack-1x fa-share-alt"></i>
+				                                 </span>
+				                                 </a>
+				                              </div>
+				                              <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+				                           </div>
+				                           <div class="post-body">
+				                              <div class="post-excerpt">
+				                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+				                              </div>
+				                           </div>
+				                           <div class="post-footer">
+				                              <span class="post-readmore">
+				                              <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+				                              <a href="#"><i class="fa fa-facebook"></i></a>
+				                              <a href="#"><i class="fa fa-twitter"></i></a>
+				                              <a href="#"><i class="fa fa-linkedin"></i></a>
+				                              <a href="#"><i class="fa fa-instagram"></i></a>
+				                              </span>
+				                           </div>
+				                        </div>
+				                        <!-- -->
+				                     </div>
+				                  </article>
+				               </div>
+				            </div>
+				         </div>
+				      </div>
+				   </div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="gallery section color" id="gallery">
+		<div class="container">
+			<h3 class="header-title">
+				<span class="icons">
+					<span class="fa-stack">
+						<i class="fa rhex fa-stack-2x"></i>
+						<i class="fa fa-video-camera fa-stack-1x"></i>
+					</span>
+				</span>
+				<span class="title-text">Галерея</span>
+			</h3>
+			<div class="row">
+				<div class="col-sm-4 col-xs-12">
+					<article class="media">
+						<div class="post-media">
+						    <div class="post-type">
+						        <i class="fa fa-video-camera"></i>
+						    </div>
+						    <img src="{% static 'assets/images/post/1.jpg' %}" alt="">
+						</div>
+						<div class="post-header">
+						    <h2 class="post-title"><a href="#">Департамент кинематографии объявляет конкурс на должность режиссера-постановщика художественного фильма “Тайлак Баатыр”</a></h2>
+						</div>
+					</article>
+				</div>
+				<div class="col-sm-4 col-xs-12">
+					<article class="media">
+	                    <div class="post-media">
+	                        <div class="post-type">
+	                            <i class="fa fa-photo"></i>
+	                        </div>
+	                        <img src="{% static 'assets/images/post/2.jpg' %}" alt="">
+	                    </div>
+	                    <div class="post-header">
+	                        <h2 class="post-title"><a href="#">Кыргызская Высшая Школа Киноискусства и Телевидения объявляет набор на курсы по специальности "Кинопродюсер" КИНОПРОДЮСЕР</a></h2>
+	                    </div>
+	                </article>
+				</div>
+				<div class="col-sm-4 col-xs-12">
+					<article class="media">
+	                    <div class="post-media">
+	                        <div class="post-type">
+	                            <i class="fa fa-photo"></i>
+	                        </div>
+	                        <img src="{% static 'assets/images/post/3.jpg' %}" alt="">
+	                    </div>
+	                    <div class="post-header">
+	                        <h2 class="post-title"><a href="#">Кыргызская Высшая Школа Киноискусства и Телевидения объявляет набор на курсы по специальности «КИНОДРАМАТУРГ ИГРОВОГО КИНО»</a></h2>
+	                    </div>
+	                </article>
+				</div>
+			</div>
+			<div class="text-center margin-top">
+                <a href="#" class="btn btn-theme">Баардыгын көрүү</a>
+            </div>
+		</div>
+	</section>
+	<section class="founders section" id="founders">
+		<div class="container">
+			<h3 class="header-title">
+				<span class="icons">
+					<span class="fa-stack">
+						<i class="fa rhex fa-stack-2x"></i>
+						<i class="fa fa-user fa-stack-1x"></i>
+					</span>
+				</span>
+				<span class="title-text">Негиздөөчүлөр</span>
+			</h3>
+			<div class="row">
+				<div class="col-sm-6 col-md-3">
+                    <div class="thumbnail no-border no-padding text-center">
+						<div class="media">
+                            <img src="assets/images/founders/1.jpg" alt="">
+                        </div>
+                        <div class="caption before-media">
+                            <h3 class="caption-title">Эрнест Абдыжапаров</h3>
+                            <p class="caption-category">Президент</p>
+                        </div>
+                        <div class="caption">
+                            <p>Фестивалдын эң арадактуу жана тажрыйбалуу негиздөөчүсү</p>
+                            <ul class="social-line list-inline text-center">
+                                <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+				<div class="col-sm-6 col-md-3">
+                    <div class="thumbnail no-border no-padding text-center">
+						<div class="media">
+                            <img src="assets/images/founders/2.jpg" alt="">
+                        </div>
+                        <div class="caption before-media">
+                            <h3 class="caption-title">Темир Бирназаров</h3>
+                            <p class="caption-category">Директор</p>
+                        </div>
+                        <div class="caption">
+                            <p>Тасмаларын башкача кызыктуу кылып тарткан инсан</p>
+                            <ul class="social-line list-inline text-center">
+                                <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+				<div class="col-sm-6 col-md-3">
+                    <div class="thumbnail no-border no-padding text-center">
+						<div class="media">
+                            <img src="assets/images/founders/3.jpg" alt="">
+                        </div>
+                        <div class="caption before-media">
+                            <h3 class="caption-title">Актан Арым кубат</h3>
+                            <p class="caption-category">Негиздөөчү</p>
+                        </div>
+                        <div class="caption">
+                            <p>Абдан күчтүү режиссерлордун бири.</p>
+                            <ul class="social-line list-inline text-center">
+                                <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+				<div class="col-sm-6 col-md-3">
+                    <div class="thumbnail no-border no-padding text-center">
+						<div class="media">
+                            <img src="assets/images/founders/4.jpg" alt="">
+                        </div>
+                        <div class="caption before-media">
+                            <h3 class="caption-title">Азамат Арыков</h3>
+                            <p class="caption-category">Режисер</p>
+                        </div>
+                        <div class="caption">
+                            <p>Келечекте көптү үмүттөндүрө турган режисер</p>
+                            <ul class="social-line list-inline text-center">
+                                <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</section>
+
+    <!-- FOOTER -->
+    {% include 'partials/footer.html' %}
+
+	<script src="{% static 'assets/javascripts/jquery.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'assets/javascripts/bootstrap.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'assets/javascripts/slick.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'assets/javascripts/jquery.easing.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'assets/javascripts/scrolling-nav.js' %}" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		$('.slick-slider').slick({
+			dots: true,
+			speed: 500
+		});
+	</script>
 
 </body>
 </html>
