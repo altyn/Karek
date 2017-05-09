@@ -14,23 +14,319 @@
          <div class="col-sm-12 col-xs-12">
             <div class="schedule-wrapper">
                <!-- tab1 -->
-               <div class="">
+               <div class="" id="tablist">
                   <div class="schedule-tabs lv1">
-                     <ul class="navtabs nav-justified" id="numTabs">
-                        <li class="active"><a href="tabs/tab-first.html" data-target="#tab-first" id="first_tab" data-toggle="tabajax" rel="tooltip">Лучший игровой фильм</a></li>
-                        <li class=""><a href="tabs/tab-second.html" data-target="#tab-second" id="second_tab" data-toggle="tabajax" rel="tooltip">Лучший анимационный фильм</a></li>
-                        <li class=""><a href="tabs/tab-third.html" data-target="#tab-third" id="third_tab" data-toggle="tabajax" rel="tooltip">Лучший документальный фильм</a></li>
+                     <ul class="navtabs nav-justified">
+                        <li class="active"><a href="#tab-first" data-toggle="tab" aria-expanded="true" onclick="show('image1')">Лучший игровой фильм</a></li>
+                        <li class=""><a href="#tab-second" data-toggle="tab" aria-expanded="false" onclick="show('image2')">Лучший анимационный фильм</a></li>
+                        <li class=""><a href="#tab-third" data-toggle="tab" aria-expanded="false" onclick="show('image3')">Лучший документальный фильм</a></li>
                      </ul>
                   </div>
                   <div class="tab-content lv2">
                      <div id="tab-first" class="tab-pane fade active in">
-
+                        <div class="timeline">
+                           <article class="post-wrap animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="300">
+                              <div class="media">
+                                 <div class="post-media pull-left">
+                                    <div class="post-media-img">
+                                       <img src="{% static 'assets/images/winners/1.jpg' %}" alt="" class="media-object">
+                                    </div>
+                                    <div class="watch">
+                                       <a href="#" class="btn btn-theme">Видео</a>
+                                    </div>
+                                 </div>
+                                 <div class="media-body">
+                                    <div class="post-header">
+                                       <h2 class="post-title">Мирбек Атабеков</h2>
+                                    </div>
+                                    <div class="post-body">
+                                       <div class="post-excerpt">
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                       </div>
+                                    </div>
+                                    <div class="post-footer">
+                                       <span class="post-readmore">
+                                       <a href="#"><i class="fa fa-facebook"></i></a>
+                                       <a href="#"><i class="fa fa-twitter"></i></a>
+                                       <a href="#"><i class="fa fa-instagram"></i></a>
+                                       </span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </article>
+                        </div>
                      </div>
                      <div id="tab-second" class="tab-pane fade">
-
+                        <div class="timeline">
+                           <article class="post-wrap animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="200">
+                              <div class="media">
+                                 <div class="post-media pull-left">
+                                    <div class="post-media-img">
+                                       <img src="{% static 'assets/images/winners/2.jpg' %}" alt="" class="media-object">
+                                    </div>
+                                    <div class="watch">
+                                       <a href="#" class="btn btn-theme">Видео</a>
+                                    </div>
+                                 </div>
+                                 <div class="media-body">
+                                    <div class="post-header">
+                                       <h2 class="post-title">Дүйшөбаева Айжамал</h2>
+                                    </div>
+                                    <div class="post-body">
+                                       <div class="post-excerpt">
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                       </div>
+                                    </div>
+                                    <div class="post-footer">
+                                       <span class="post-readmore">
+                                       <a href="#"><i class="fa fa-facebook"></i></a>
+                                       <a href="#"><i class="fa fa-twitter"></i></a>
+                                       <a href="#"><i class="fa fa-instagram"></i></a>
+                                       </span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </article>
+                        </div>
                      </div>
                      <div id="tab-third" class="tab-pane fade">
-
+                        <div class="timeline">
+                           <article class="post-wrap animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="300">
+                              <div class="media">
+                                 <div class="post-media pull-left">
+                                    <div class="post-media-img">
+                                       <img src="{% static 'assets/images/winners/3.jpg' %}" alt="" class="media-object">
+                                    </div>
+                                    <div class="watch">
+                                       <a href="#" class="btn btn-theme">Видео</a>
+                                    </div>
+                                 </div>
+                                 <div class="media-body">
+                                    <div class="post-header">
+                                       <h2 class="post-title">Виталий Ким</h2>
+                                    </div>
+                                    <div class="post-body">
+                                       <div class="post-excerpt">
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                       </div>
+                                    </div>
+                                    <div class="post-footer">
+                                       <span class="post-readmore">
+                                       <a href="#"><i class="fa fa-facebook"></i></a>
+                                       <a href="#"><i class="fa fa-twitter"></i></a>
+                                       <a href="#"><i class="fa fa-instagram"></i></a>
+                                       </span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </article>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="lv2 tab-out">
+                     <div class="image-gallery" id="image1" style="display: block;">
+                        <ul id="hash" class="list-unstyled row">
+                           <li data-src="{% static 'assets/images/winners/gallery/1-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-1.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                           <li data-src="{% static 'assets/images/winners/gallery/2-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-2.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                           <li data-src="{% static 'assets/images/winners/gallery/13-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-13.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                           <li data-src="{% static 'assets/images/winners/gallery/4-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-4.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                           <li data-src="{% static 'assets/images/winners/gallery/1-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-1.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                           <li data-src="{% static 'assets/images/winners/gallery/2-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-2.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                           <li data-src="{% static 'assets/images/winners/gallery/13-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-13.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                           <li data-src="{% static 'assets/images/winners/gallery/4-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-4.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="image-gallery" id="image2" style="display: none;">
+                        <ul id="hash2" class="list-unstyled row">
+                           <li data-src="{% static 'assets/images/winners/gallery/13-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-13.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                           <li data-src="{% static 'assets/images/winners/gallery/4-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-4.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                           <li data-src="{% static 'assets/images/winners/gallery/1-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-1.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                           <li data-src="{% static 'assets/images/winners/gallery/2-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-2.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                           <li data-src="{% static 'assets/images/winners/gallery/1-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-1.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                           <li data-src="{% static 'assets/images/winners/gallery/2-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-2.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                           <li data-src="{% static 'assets/images/winners/gallery/13-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-13.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                           <li data-src="{% static 'assets/images/winners/gallery/4-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-4.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="image-gallery" id="image3" style="display: none;">
+                        <ul id="hash3" class="list-unstyled row">
+                           <li data-src="{% static 'assets/images/winners/gallery/2-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-2.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                           <li data-src="{% static 'assets/images/winners/gallery/1-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-1.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                           <li data-src="{% static 'assets/images/winners/gallery/13-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-13.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                           <li data-src="{% static 'assets/images/winners/gallery/4-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-4.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                           <li data-src="{% static 'assets/images/winners/gallery/1-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-1.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                           <li data-src="{% static 'assets/images/winners/gallery/2-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-2.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                           <li data-src="{% static 'assets/images/winners/gallery/13-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-13.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                           <li data-src="{% static 'assets/images/winners/gallery/4-1600.jpg' %}" data-sub-html="<h4>Аталышы</h4><p>Сүрөттүн мазмуну</p>">
+                              <a href="#">
+                                 <img class="img-responsive" src="{% static 'assets/images/winners/gallery/thumb-4.jpg' %}">
+                                 <div class="image-gallery-poster">
+                                    <img src="{% static 'assets/images/zoom.png' %}">
+                                 </div>
+                              </a>
+                           </li>
+                        </ul>
                      </div>
                   </div>
                </div>
