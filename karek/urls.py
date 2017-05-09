@@ -23,7 +23,7 @@ admin.site.site_header = "ADMIN PANEL"
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'$', IndexView.as_view()),
+    url(r'^$', IndexView.as_view()),
 ]
 
 if settings.DEBUG:
