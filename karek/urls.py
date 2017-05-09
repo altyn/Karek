@@ -17,16 +17,13 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.conf import settings
 
-from blog.views import IndexView, TabOneView, TabTwoView, TabThreeView
+from blog.views import IndexView,
 
 admin.site.site_header = "ADMIN PANEL"
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', IndexView.as_view()),
-    url(r'^nomination/tab1$', TabOneView.as_view()),
-    url(r'^nomination/tab2$', TabTwoView.as_view()),
-    url(r'^nomination/tab3$', TabThreeView.as_view()),
 ]
 
 if settings.DEBUG:
