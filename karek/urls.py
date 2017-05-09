@@ -17,7 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.conf import settings
 
-from blog.views import IndexView,
+from blog.views import IndexView
 
 admin.site.site_header = "ADMIN PANEL"
 
