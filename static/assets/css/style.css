@@ -565,6 +565,10 @@ header {
 .nominant .watch {
   margin-top: 10px;
   text-align: center; }
+.nominant .tab-out {
+  padding: 0 70px; }
+.nominant .hider {
+  display: none; }
 
 .gallery .media .post-media {
   margin-bottom: 20px;
