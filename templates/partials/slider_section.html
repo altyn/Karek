@@ -1,25 +1,18 @@
 {% load staticfiles %}
 <div class="slick-slider">
-    <div>
-        <img class="img-responsive" src="{% static 'assets/images/slider/1.jpg' %}" alt="">
-        <div class="desc container">
-            <div class="desc-title">
-                Объявляется прием фильмов на второй республиканский детско-юношеский кинофестиваль «Карек»
+    {% if slider_list %}
+        {% for slider in slider_list %}
+            <div>
+                <img src="{{ slider.image.url }}" alt="">
+                <div class="desc container">
+                    <div class="desc-title">
+                        {{ slider.link.title }}
+                    </div>
+                    <div class="desc-content">
+                        {{ slider.desc }}
+                    </div>
+                </div>
             </div>
-            <div class="desc-content">
-                В кинофестивале смогут принять участие абсолютно все ученики школ и колледжей страныот 7 до 17 лет, интересующиеся кинематографией. Для этого необходимо снять короткометражный фильм до 10 минут в формате mov, mp4, m4v, mpeg;на любую камеру, планшет или телефон. Фильм может быть снят в любом жанре: комедия, мелодрама, драма, триллер, боевик, фантастика, анимация, документальный.
-            </div>
-        </div>
-    </div>
-    <div>
-        <img class="img-responsive" src="{% static 'assets/images/slider/2.jpg' %}" alt="">
-        <div class="desc container">
-            <div class="desc-title">
-                Цель фестиваля, уже сейчас, выявить и начать воспитывать будущих профессионалов и специалистов в этой сфере.
-            </div>
-            <div class="desc-content">
-                Второй республиканский детско-юношеский кинофестиваль«Карек» пройдет при поддержке Министерства культуры, информации и туризма КР, Министерства образования и науки КР, Департамента кинематографистии КР, Союза кинематографистов, Академии «Ак Илбирс»и частных киностудий.
-            </div>
-        </div>
-    </div>
+        {% endfor %}
+    {% endif %}
 </div>

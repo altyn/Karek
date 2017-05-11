@@ -15,7 +15,7 @@ class News(models.Model):
         verbose_name_plural = "Новости"
 
     def __str__(self):
-        return '%s' % self.id
+        return '%s' % self.title
 
 
 # Основатели
@@ -29,7 +29,7 @@ class Founders(models.Model):
         verbose_name_plural = "Основатели"
 
     def __str__(self):
-        return '%s' % self.id
+        return '%s' % self.name
 
 
 # Партнеры
@@ -42,7 +42,7 @@ class Partners(models.Model):
         verbose_name_plural = "Партнеры"
 
     def __str__(self):
-        return '%s' % self.id
+        return '%s' % self.name
 
 
 # Объявление
@@ -54,6 +54,20 @@ class Advert(models.Model):
     class Meta:
         verbose_name = "Объявление"
         verbose_name_plural = "Объявления"
+
+    def __str__(self):
+        return '%s' % self.title
+
+
+# Слайдер
+class Slider(models.Model):
+    image = FilerFileField()
+    desc = models.TextField()
+    link = models.ForeignKey(News, null=True, blank=True)
+
+    class Meta:
+        verbose_name = "Слайдер"
+        verbose_name_plural = "Слайдеры"
 
     def __str__(self):
         return '%s' % self.id
