@@ -11,27 +11,20 @@
         <span class="title-text">Негиздөөчүлөр</span>
         </h3>
         <div class="row">
-            <div class="col-sm-6 col-xs-12 founders2-col">
-                <div class="founders2-thumb">
-                    <img src="{% static 'assets/images/advert/1.jpg' %}" alt="">
-                </div>
-                <div class="founders2-info">
-                    <h4 class="title">Эрнест Абдыжапаров</h4>
-                    <div class="content">
-                        Организаторы - Министерство культуры КР, Союз кинематографистов КР, кинотеатр "Кыргыз киносу" и частные киностудии.
+            {% if founders_list %}
+                {% for founder in founders_list %}
+                    <div class="col-sm-6 col-xs-12 founders2-col">
+                        <div class="founders2-thumb">
+                            {% load thumbnail %}
+                                <img src="{% thumbnail founder.image 50x50 crop %}" alt="">
+                        </div>
+                        <div class="founders2-info">
+                            <h4 class="title">{{ founder.name }}</h4>
+                            <div class="content">{{ founder.desc }}</div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-xs-12 founders2-col">
-                <div class="founders2-thumb">
-                    <img src="{% static 'assets/images/advert/2.jpg' %}" alt="">
-                </div>
-                <div class="founders2-info">
-                    <h4 class="title">Темир Бирназаров</h4>
-                    <div class="content">Каждый ребенок – большой талант, которому есть что сказать миру, посредством кинематографа. Мы хотим открыть эти таланты.
-                    </div>
-                </div>
-            </div>
+                {% endfor %}
+            {% endif %}
         </div>
     </div>
 </section>

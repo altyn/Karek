@@ -16,7 +16,10 @@ class IndexView(TemplateView):
             context["partners_list"] = Partners.objects.all()
         except Partners.DoesNotExist:
             context["partners_list"] = []
-        print(context)
+        try:
+            context["founders_list"] = Founders.objects.all()
+        except Founders.DoesNotExist:
+            context["founders_list"] = []
         return context
 
 
