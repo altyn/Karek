@@ -12,55 +12,18 @@
       </h3>
       <div class="row">
          <div class="sponsors-item">
-            <div class="div">
-               <div class="col-xs-12">
-                  <a href="#" >
-                     <img src="{% static 'assets/images/post/1.jpg' %}" alt="">
-                  </a>
-               </div>
-            </div>
-            <div class="div">
-               <div class="col-xs-12">
-                  <a href="#" >
-                     <img src="{% static 'assets/images/post/2.jpg' %}" alt="">
-                  </a>
-               </div>
-            </div>
-            <div class="div">
-               <div class="col-xs-12">
-                  <a href="#" >
-                     <img src="{% static 'assets/images/post/3.jpg' %}" alt="">
-                  </a>
-               </div>
-            </div>
-            <div class="div">
-               <div class="col-xs-12">
-                  <a href="#" >
-                     <img src="{% static 'assets/images/post/1.jpg' %}" alt="">
-                  </a>
-               </div>
-            </div>
-            <div class="div">
-               <div class="col-xs-12">
-                  <a href="#" >
-                     <img src="{% static 'assets/images/post/2.jpg' %}" alt="">
-                  </a>
-               </div>
-            </div>
-            <div class="div">
-               <div class="col-xs-12">
-                  <a href="#" >
-                     <img src="{% static 'assets/images/post/3.jpg' %}" alt="">
-                  </a>
-               </div>
-            </div>
-            <div class="div">
-               <div class="col-xs-12">
-                  <a href="#" >
-                     <img src="{% static 'assets/images/post/1.jpg' %}" alt="">
-                  </a>
-               </div>
-            </div>
+            {% if partners_list %}
+                {% for partner in partners_list %}
+                    <div class="div">
+                        <div class="col-xs-12">
+                            {% load thumbnail %}
+                            <a href="#" >
+                                <img src="{% thumbnail partner.image 50x50 crop %}" alt="{{ partner.name }}">
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+             {% endif %}
          </div>
       </div>
    </div>
