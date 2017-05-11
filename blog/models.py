@@ -71,3 +71,21 @@ class Slider(models.Model):
 
     def __str__(self):
         return '%s' % self.id
+
+
+# Cсылка на соц. сети и логотип
+class Social(models.Model):
+    logo = FilerFileField()
+    header = models.CharField(max_length=200)
+    facebook = models.URLField(null=True, blank=True)
+    vk = models.URLField(null=True, blank=True)
+    ok = models.URLField(null=True, blank=True)
+    twitter = models.URLField(null=True, blank=True)
+    instagram = models.URLField(null=True, blank=True)
+
+    class Meta:
+        verbose_name = "Социальная сеть"
+        verbose_name_plural = "Социальные сети"
+
+    def __str__(self):
+        return '%s' % self.id

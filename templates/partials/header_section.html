@@ -6,8 +6,13 @@
             <div class="navbar-header">
                 <div class="logo">
                     <a class="page-scroll" href="#page-top">
-                        <img src="http://www.impacthub.net/hubfs/Impact_Hub_Sept2016_Theme/Image/impact-hub-logo.png?t=1493125495164" alt="">
-                        <span>Карек фестивалы</span>
+                        {% if social_list %}
+                            {% for social in social_list %}
+                                <img src="{{ social.logo.url }}" alt="">
+                                <span>{{ social.header }}</span>
+                            {% endfor %}
+                        {% endif %}
+
                     </a>
                 </div>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-top" aria-expanded="false">

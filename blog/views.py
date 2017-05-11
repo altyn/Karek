@@ -1,5 +1,6 @@
 from django.views.generic import TemplateView, ListView
-from .models import News, Partners, Advert, Founders, Slider
+from .models import News, Partners, Advert
+from .models import Founders, Slider, Social
 
 
 # Create your views here.
@@ -24,6 +25,10 @@ class IndexView(TemplateView):
             context["slider_list"] = Slider.objects.all()
         except Slider.DoesNotExist:
             context["slider_list"] = []
+        try:
+            context["social_list"] = Social.objects.all()
+        except Social.DoesNotExist:
+            context["social_list"] = []
         return context
 
 

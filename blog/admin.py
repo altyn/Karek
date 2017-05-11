@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import News, Founders
+from .models import News, Founders, Social
 from .models import Partners, Advert, Slider
 
 
@@ -30,6 +30,17 @@ class SlidersAdmin(admin.ModelAdmin):
 
     def has_add_permission(self, request):
         if Slider.objects.count() > 3:
+            return False
+        else:
+            return True
+
+
+@admin.register(Social)
+class SocialsAdmin(admin.ModelAdmin):
+    list_display = ('id', 'facebook', 'vk', 'ok', 'twitter', 'instagram',)
+
+    def has_add_permission(self, request):
+        if Social.objects.count() > 0:
             return False
         else:
             return True
