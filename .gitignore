@@ -1,4 +1,4 @@
 .idea
 *.py[o,c]
-db.sqlite3
+#db.sqlite3
 django.log
