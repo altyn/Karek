@@ -37,7 +37,8 @@ class SlidersAdmin(admin.ModelAdmin):
 
 @admin.register(Social)
 class SocialsAdmin(admin.ModelAdmin):
-    list_display = ('id', 'facebook', 'vk', 'ok', 'twitter', 'instagram',)
+    list_display = ('header', 'facebook', 'vk', 'ok', 'twitter', 'instagram',)
+    list_display_links = ('header',)
 
     def has_add_permission(self, request):
         if Social.objects.count() > 0:
