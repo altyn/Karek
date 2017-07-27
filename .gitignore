@@ -2,3 +2,7 @@
 *.py[o,c]
 #db.sqlite3
 django.log
+karek/settings.py
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
