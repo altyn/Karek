@@ -2,8 +2,25 @@
     <div class="container">
         <div class="footer-meta">
             <div class="container text-center">
+                <div class="links">
+                    <div class="links-top">
+                        <ul class="links-top-nav">
+                            <li><a class="page-scroll" href="#advert">Пресс релиздер</a></li>
+                            <li><a class="page-scroll" href="#news">Жарыялар</a></li>
+                            <li><a class="page-scroll" href="#nominant">Жеңүүчүлөр</a></li>
+                            <li><a class="page-scroll" href="#gallery">Галерея</a></li>
+                            <li><a class="page-scroll" href="#founders">Негиздөөчүлөр</a></li>
+                        </ul>
+                    </div>
+                    <div class="links-bottom">
+                        <ul class="links-bottom-nav">
+                            <li><a class="page-scroll" href="#news">Биз жөнүндө</a></li>
+                            <li><a class="page-scroll" href="#advert">Байланыш</a></li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="clearfix">
-                    <ul class="social-line list-inline">
+                    <ul class="social-line">
                         {% if social_list %}
                             {% for social in social_list %}
                                 <li><a href="{{ social.twitter }}" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>

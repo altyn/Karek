@@ -2,29 +2,39 @@
 {% load sitetree %}
 <header>
     <nav class="navbar navbar-top navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <div class="logo">
-                    <a class="page-scroll" href="#page-top">
+        <div class="container loc">
+           <div class="navbar-header">
+              <div class="logo">
+                 <a class="page-scroll" href="#page-top">
                         {% if social_list %}
                             {% for social in social_list %}
                                 <img src="{{ social.logo.url }}" alt="">
                                 <span>{{ social.header }}</span>
                             {% endfor %}
                         {% endif %}
-
-                    </a>
-                </div>
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-top" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar-top">
-                {% sitetree_tree from "main_menu" include "trunk,topmenu" template 'sitetree/menu.html'%}
-            </div>
+                 </a>
+              </div>
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-top" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              </button>                  
+           </div>
+           <div class="collapse navbar-collapse" id="navbar-top">
+              {% sitetree_tree from "main_menu" include "trunk,topmenu" template 'sitetree/menu.html'%}
+           </div>
+           <div class="locale">
+              <div class="main">
+                 <input type="checkbox" id="drop-4" hidden>
+                 <label class="dropHeader dropHeader-4" for="drop-4"><i class="fa fa-language" aria-hidden="true"></i>Кыргызча</label>
+                 <ul class="list list-4">
+                    <li class="item">Кыргызча</li>
+                    <li class="item">Русский</li>
+                    <li class="item">English</li>
+                 </ul>
+              </div>
+           </div>
         </div>
     </nav>
 </header>

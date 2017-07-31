@@ -5,141 +5,33 @@
 <script src="{% static 'assets/javascripts/jquery.easing.min.js' %}" type="text/javascript"></script>
 <script src="{% static 'assets/javascripts/scrolling-nav.js' %}" type="text/javascript"></script>
 <script type="text/javascript">
- $('.slick-slider').slick({
- 	dots: true,
- 	speed: 500
- });
-</script>
-<script type="text/javascript">
- $('.sponsors-item').slick({
-    infinite: false,
-    slidesToShow: 6,
+   $('.slick-slider').slick({
     dots: true,
-      responsive: [
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
- });
+    speed: 500
+   });
 </script>
 <script type="text/javascript">
-function show(imageId) {
-    $('#tablist .image-gallery').hide();
-    $('#tablist #' +imageId).show();
-}
-</script>
-<script src="{% static 'assets/javascripts/lightgallery/lightgallery.js' %}"></script>
-<script src="{% static 'assets/javascripts/lightgallery/lg-hash.js' %}"></script>
-<script type="text/javascript">
- $(document).ready(function(){
-    $('#hash').lightGallery({
-       loop:true,
-       keyPress:true,
-       auto:true
-    });
-    $('#hash2').lightGallery({
-       loop:true,
-       keyPress:true,
-       auto:true
-    });
-    $('#hash3').lightGallery({
-       loop:true,
-       keyPress:true,
-       auto:true
-    });
- });
-</script>
-<script src="{% static 'assets/javascripts/lightslider.js' %}"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-  $('#hash').lightSlider({
-      item:6,
-      galleryId:1,
-      responsive : [
+   $('.sponsors-item').slick({
+      infinite: false,
+      slidesToShow: 6,
+      dots: true,
+      prevArrow: $('.prev'),
+      nextArrow: $('.next'),
+        responsive: [
           {
-              breakpoint:800,
-              settings: {
-                  item:2,
-                  slideMove:1,
-                  slideMargin:6,
-                }
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
           },
           {
-              breakpoint:480,
-              settings: {
-                  item:1,
-                  slideMove:1
-                }
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
           }
-      ],
-      onBeforeStart: function(el) {
-          el.lightGallery({
-              selector: '#hash .lslide'
-          });
-      }   
-  });
- $('#hash2').lightSlider({
-      item:6,
-      galleryId:2,
-      responsive : [
-          {
-              breakpoint:800,
-              settings: {
-                  item:2,
-                  slideMove:1,
-                  slideMargin:6,
-                }
-          },
-          {
-              breakpoint:480,
-              settings: {
-                  item:1,
-                  slideMove:1
-                }
-          }
-      ],
-      onBeforeStart: function(el) {
-          el.lightGallery({
-              selector: '#hash2 .lslide'
-          });
-      }   
-  });  
- $('#hash3').lightSlider({
-      item:6,
-      galleryId:3,
-      responsive : [
-          {
-              breakpoint:800,
-              settings: {
-                  item:2,
-                  slideMove:1,
-                  slideMargin:6,
-                }
-          },
-          {
-              breakpoint:480,
-              settings: {
-                  item:1,
-                  slideMove:1
-                }
-          }
-      ],
-      onBeforeStart: function(el) {
-          el.lightGallery({
-              selector: '#hash3 .lslide'
-          });
-      }   
-  });    
-});
+        ]
+   });
 </script>

@@ -1,6 +1,7 @@
 from django.views.generic import TemplateView, ListView
 from .models import News, Partners, Advert
 from .models import Founders, Slider, Social
+from .models import Gallery
 
 
 # Create your views here.
@@ -29,6 +30,10 @@ class IndexView(TemplateView):
             context["social_list"] = Social.objects.all()
         except Social.DoesNotExist:
             context["social_list"] = []
+        try:
+            context["gallery_list"] = News.objects.all()
+        except News.DoesNotExist:
+            context["gallery_list"] = []
         return context
 
 
@@ -36,3 +41,9 @@ class NewsList(ListView):
     template_name = 'news/news_list.html'
     model = News
     context_object_name = 'news_list'
+
+
+class GalleryList(ListView):
+    template_name = 'gallery/gallery_list.html'
+    model = Gallery
+    context_object_name = 'gallery_list'

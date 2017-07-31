@@ -1,17 +1,21 @@
 @media only screen and (max-width: 768px) {
   .navbar-top {
-    padding: 0; }
+    padding: 0px 10px 0 0px; }
     .navbar-top .navbar-nav {
       margin: 0; }
       .navbar-top .navbar-nav li a {
         text-align: right; }
     .navbar-top .logo img {
-      width: 80px;
-      height: 80px;
-      left: 15px; }
+      width: 30px;
+      height: 40px;
+      left: 15px;
+      top: 5px; }
     .navbar-top .logo span {
-      margin-left: 110px;
+      margin-left: 60px;
       font-size: 20px; }
+
+  .top-nav-collapse .navbar-top {
+    padding: 30px 10px 0 0px !important; }
 
   .advert-col {
     padding: 0;
@@ -98,7 +102,10 @@
     .sponsors-item .slick-next {
       right: 35px; }
     .sponsors-item .slick-prev {
-      left: 35px; } }
+      left: 35px; }
+
+  .article article {
+    margin: 10px 0; } }
 @media only screen and (max-width: 970px) {
   .advert-thumb {
     display: block;

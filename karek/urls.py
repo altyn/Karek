@@ -17,7 +17,8 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf import settings
 
-from blog.views import IndexView, NewsList
+from blog.views import IndexView, NewsList, GalleryList
+
 
 admin.site.site_header = "ADMIN PANEL"
 
@@ -26,6 +27,8 @@ urlpatterns = [
     url(r'^$', IndexView.as_view()),
     url(r'^filer/', include('filer.urls')),
     url(r'^news/', NewsList.as_view()),
+    url(r'^gallery/', GalleryList.as_view()),
+
 ]
 
 if settings.DEBUG:

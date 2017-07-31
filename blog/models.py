@@ -89,3 +89,17 @@ class Social(models.Model):
 
     def __str__(self):
         return '%s' % self.id
+
+
+class Gallery(models.Model):
+    title = models.CharField(max_length=300)
+    thumb = FilerFileField()
+    content = models.TextField(null=True, blank=True)
+    date = models.DateField(default=timezone.now, editable=False)
+
+    class Meta:
+        verbose_name = "Галлерея"
+        verbose_name_plural = "Галлерея"
+
+    def __str__(self):
+        return '%s' % self.title

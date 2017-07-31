@@ -1,6 +1,7 @@
 @media only screen and (max-width: 768px) {
+
 	.navbar-top{
-		padding:0;
+		padding:0px 10px 0 0px;
 		.navbar-nav {
 			margin: 0;
 			li {
@@ -11,18 +12,23 @@
 		}
 		.logo {
 			img {
-				width: 80px;
-				height: 80px;
-				left:15px;
+			    width: 30px;
+			    height: 40px;
+			    left: 15px;
+			    top: 5px;
 			}
 			span {
-				margin-left:110px;
+				margin-left:60px;
 				font-size: 20px;
 				
 			}
 		}
+	}
 
-
+	.top-nav-collapse{
+		.navbar-top{
+			padding:30px 10px 0 0px !important;
+		}
 	}
 
 	.advert{
@@ -159,6 +165,9 @@
 			left: 35px;
 
 		}
+	}
+	.article article{
+		margin: 10px 0;
 	}
 
 }

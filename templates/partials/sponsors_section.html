@@ -1,30 +1,36 @@
 {% load staticfiles %}
 <section class="sponsors section light" id="sponsors">
-   <div class="container padding-bottom">
+  <div class="container padding-bottom">
+    <div class="two-title">
       <h3 class="header-title">
       <span class="icons">
-         <span class="fa-stack">
-            <i class="fa rhex fa-stack-2x"></i>
-            <i class="fa fa-user fa-stack-1x"></i>
-         </span>
+        <span class="fa-stack">
+          <i class="fa rhex fa-stack-2x"></i>
+          <i class="fa fa-users fa-stack-1x" aria-hidden="true"></i>
+        </span>
       </span>
       <span class="title-text">Партнерлор</span>
       </h3>
-      <div class="row">
-         <div class="sponsors-item">
-            {% if partners_list %}
-                {% for partner in partners_list %}
-                    <div class="div">
-                        <div class="col-xs-12">
-                            {% load thumbnail %}
-                            <a href="#" >
-                                <img src="{% thumbnail partner.image 50x50 crop %}" alt="{{ partner.name }}">
-                            </a>
-                        </div>
-                    </div>
-                {% endfor %}
-             {% endif %}
-         </div>
+      <ul class="slick-navs">
+        <li class="prev"></li>
+        <li class="next"></li>
+      </ul>
+    </div>
+    <div class="row">
+      <div class="sponsors-item">
+          {% if partners_list %}
+            {% for partner in partners_list %}
+              <div class="div">
+                <div class="col-xs-12">
+                  {% load thumbnail %}
+                  <a href="#" >
+                    <img src="{% thumbnail partner.image 300x300 crop %}" alt="{{ partner.name }}">
+                  </a>
+                </div>
+              </div>
+            {% endfor %}
+          {% endif %}
       </div>
-   </div>
+    </div>
+  </div>
 </section>

@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+   
+
+      	<section class="page gallery section">
+		<div class="container">
+			<h3 class="header-title">
+				<span class="icons">
+					<span class="fa-stack">
+						<i class="fa rhex fa-stack-2x"></i>
+						<i class="fa fa-camera fa-stack-1x"></i>	
+					</span>
+				</span>
+				<span class="title-text">Галерея</span>				
+			</h3>
+			<div class="row">
+			 	{% for gallery in gallery_list %}
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<article class="media">
+						<div class="post-media">
+						    <div class="post-type">
+						        <i class="fa fa-video-camera"></i>
+						        <i class="fa fa-photo"></i>
+						        <i class="fa fa-music"></i>
+						    </div>
+						     {% load thumbnail %}
+						    <img src="{% thumbnail gallery.thumb 263x213 crop %}" alt="">
+						</div>
+						<div class="post-header">
+							<span class="post-date"><i class="fa fa-clock-o" aria-hidden="true"></i>{{ gallery.date }}</span>
+						    <h2 class="post-title"><a href="/gallery/{{ gallery.id }}" target="_blank">{{ gallery.title }}</a></h2>
+						</div>
+					</article>
+				</div>
+				{% endfor %}
+			</div>	
+			<div class="text-center margin-top news">
+                <a href="#" class="btn btn-theme">дагы көрүү</a>
+            </div>
+		</div>	
+	</section>
+{% endblock %}

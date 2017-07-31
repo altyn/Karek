@@ -1,11 +1,17 @@
 from django.contrib import admin
 from .models import News, Founders, Social
 from .models import Partners, Advert, Slider
+from .models import Gallery
 
 
 # Register your models here.
 @admin.register(News)
 class NewsAdmin(admin.ModelAdmin):
+    list_display = ('id', 'title',)
+
+
+@admin.register(Gallery)
+class GalleryAdmin(admin.ModelAdmin):
     list_display = ('id', 'title',)
 
 
